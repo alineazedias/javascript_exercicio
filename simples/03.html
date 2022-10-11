@@ -17,19 +17,22 @@
             correspondente em graus Fahrenheit.
             <br>(F = (C × 9/5) + 32)
         </h3>
-        <label> Qual a temperatura?</label>
-        <input type="text" value="0" id="temp">
-        <button onclick="calcularTemp()">Calcular</button>
+        <label for="temperaturaEntrada"> Qual a temperatura?</label>
+        <input type="text" value="0" id="temperaturaEntrada">
+        <button onclick="calcularTemperatura()">Calcular</button>
+
+        <span id="saidaTexto"></span>
     </section>
-    <div id="texto"></div>
+
+
 </body>
 
 <script>
-    function calcularTemp() {
-        var temperatura = document.getElementById("temp").value;
-        var F = (temperatura * 9 / 5) + 32;
+    function calcularTemperatura() {
+        var celsius = document.getElementById("temperaturaEntrada").value;
+        var F = (celsius * 9 / 5) + 32;
         console.log(F);
-        document.getElementById("texto").innerHTML = "<div class='alert alert-danger'>Temperatura em Farhrenheit: " + F + "</div>";
+        document.getElementById("saidaTexto").innerHTML = "<div class='alert alert-danger'>Temperatura em Farhrenheit: " + F + "</div>";
     }
 
 </script>

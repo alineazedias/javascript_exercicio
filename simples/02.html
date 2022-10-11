@@ -18,15 +18,15 @@
             <br>(C = (F-32) * 5 / 9)
         </h3>
         <label> Qual a temperatura?</label>
-        <input type="text" value="0" id="temp">
+        <input type="text" value="0" id="valor_temperatura">
         <button onclick="calcularTemp()">Calcular</button>
     </section>
-    <div id="texto"></div>
+    <div class="container" id="texto"></div>
 </body>
 
 <script>
     function calcularTemp() {
-        var temperatura = document.getElementById("temp").value;
+        var temperatura = document.getElementById("valor_temperatura").value;
         var C = (temperatura - 32) * 5 / 9;
         console.log(C);
         document.getElementById("texto").innerHTML = "<div class='alert alert-danger'>Temperatura em Celsius: " + C + "</div>";
