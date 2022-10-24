@@ -46,6 +46,7 @@
             <div class="form-groups">
                 <button type="button" class="btn btn-primary"
                     onclick="controllerCalculoAbastecimento()">Calular</button>
+                <button type="reset" class="btn btn-primary">Limpar</button>
             </div>
         </form>
 
@@ -62,7 +63,7 @@
 
         var resposta_calculo = calculoAbastecimento(comprimento, numero_volta, abastecimento, consumo);
 
-        saidaDados("Quantidade de litros mínima: " + resposta_calculo);
+        saidaDados("Quantidade de litros mínima: " + resposta_calculo.toFixed(2));
 
     }
 
