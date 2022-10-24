@@ -15,22 +15,23 @@
         <p>
             10) Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e
             escrevê-los em ordem crescente.
-
-
         </p>
         <form>
             <div class="form-groups">
-                <label for="valor1">Digite o primeiro valor</label>
+                <label for="valor1">Digite o Primeiro valor </label>
                 <input type="number" step="1" name="valor1" id="valor1" class="form-control">
             </div>
+
             <div class="form-groups">
-                <label for="valor2">Digite o segundo valor</label>
+                <label for="valor2">Digite o Segundo valor </label>
                 <input type="number" step="1" name="valor2" id="valor2" class="form-control">
             </div>
+
             <div class="form-groups">
-                <label for="valor3">Digite o tereceiro valor</label>
+                <label for="valor3">Digite o Terceiro valor </label>
                 <input type="number" step="1" name="valor3" id="valor3" class="form-control">
             </div>
+
             <div class="form-groups">
                 <button type="button" class="btn btn-danger" onclick="controllerOrdem()">Verficar</button>
             </div>
@@ -48,29 +49,27 @@
 
         var resposta = ordenar(valor1, valor2, valor3);
         saidaDados("Ordem: " + resposta);
-
     }
 
     function ordenar(valor1 = 0, valor2 = 0, valor3 = 0) {
-        var tempo = 0;
+        var temp = 0;
         if (valor1 > valor2) {
-            temp = valor1;
-            valor1 = valor2;
-            valor2 = temp;
+            temp = valor1; //temp <- leite
+            valor1 = valor2; //copo leite <- cafe
+            valor2 = temp; //copo café <- temp
         }
 
         if (valor1 > valor3) {
             temp = valor1;
             valor1 = valor3;
             valor3 = temp;
-
         }
+
         if (valor2 > valor3) {
             temp = valor2;
             valor2 = valor3;
             valor3 = temp;
         }
-
         return "" + valor1 + "; " + valor2 + "; " + valor3;
     }
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container">
+        <p>
+            14) Escreva um programa para ler o número de gols marcados pelo Grêmio e o número de gols marcados pelo
+            Inter em um
+            GRENAL. Escrever o nome do vencedor. Caso não haja vencedor deverá ser impressa a palavra EMPATE.”
+
+        </p>
+        <form>
+            <div class="form-groups">
+                <label for="gol_gremio">Quantos gols o Gremio fez?</label>
+                <input type="number" step="1" name="gol_gremio" id="gol_gremio" class="form-control">
+            </div>
+            <div class="form-groups">
+                <label for="gol_inter">Quantos gols o Inter fez?</label>
+                <input type="number" step="1" name="gol_inter" id="gol_inter" class="form-control">
+            </div>
+            </div>
+            <div class="form-groups">
+                <button type="button" class="btn btn-danger" onclick="controllerCalculoGol()">Verficar</button>
+            </div>
+        </form>
+
+        <span id="saidaTexto"></span>
+    </section>
+</body>
+
+<script>
+    function controllerCalculoGol() {
+        var gol_gremio = parseInt(document.getElementById("gol_gremio").value);
+        var gol_inter = parseInt(document.getElementById("gol_inter").value);
+
+        var resposta = placar(gol_gremio, gol_inter);
+        saidaDados("Quem venceu? Resposta: " + resposta);
+    }
+
+    function placar(gol_gremio = 0, gol_inter = 0) {
+        if (gol_gremio > gol_inter) {
+            return "Grêmio Venceu";
+        } else if (gol_inter > gol_gremio) {
+            return "Inter Venceu";
+        } else if (gol_gremio == gol_inter) {
+            return "Empate";
+        }
+    }
+
+    function saidaDados(texto_saida) {
+        document.getElementById("saidaTexto").innerHTML = texto_saida;
+    }
+
+</script>
+
+</html>
