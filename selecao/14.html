@@ -21,11 +21,13 @@
         <form>
             <div class="form-groups">
                 <label for="gol_gremio">Quantos gols o Gremio fez?</label>
-                <input type="number" step="1" name="gol_gremio" id="gol_gremio" class="form-control">
+                <input type="number" step="1" name="gol_gremio" id="gol_gremio" min="0" max="90" step="1"
+                    class="form-control">
             </div>
             <div class="form-groups">
                 <label for="gol_inter">Quantos gols o Inter fez?</label>
-                <input type="number" step="1" name="gol_inter" id="gol_inter" class="form-control">
+                <input type="number" step="1" name="gol_inter" id="gol_inter" min="0" max="90" step="1"
+                    class="form-control" maxlength="2" pattern="/[0-9]{2}/">
             </div>
             </div>
             <div class="form-groups">

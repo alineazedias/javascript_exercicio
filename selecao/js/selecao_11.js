@@ -3,7 +3,9 @@ var global_senhaValida = "1234";
 function controllerAcesso() {
     var senha = document.getElementById("senha").value;
 
-    var validaAcesso(senha)
+    var retornoValidacao = validaAcesso(senha);
+
+    saidaTexto(retornoValidacao);
 }
 
 function validaAcesso(senha = "") {
@@ -12,4 +14,8 @@ function validaAcesso(senha = "") {
     } else {
         return "ACESSO NEGADO";
     }
+}
+
+function saidaTexto(texto) {
+    document.getElementById("saidaTexto").innerHTML = texto;
 }

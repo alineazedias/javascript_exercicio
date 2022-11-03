@@ -14,37 +14,51 @@
     <section class="container">
         <p>
             17) Escreva um programa para ler 2 valores inteiros e uma das seguintes operações a serem executadas
-            (codificada da
-            seguinte forma: 1- Adição, 2 - Subtração, 3 - Divisão, 4 - Multiplicação). Calcular e escrever o resultado
-            dessa
-            operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4.”
-
+            (codificada da seguinte forma: 1. Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). Calcular e
+            escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão
+            lidos os valores 1, 2, 3 ou 4.
         </p>
         <form>
             <div class="form-groups">
-                <label for="valor1">Valor 1:</label>
-                <input type="number" step="1" name="valor1" id="valor1" class="form-control">
+                <label for="valor-1">valor 1</label>
+                <input type="email" name="valor-1" id="valor-1" class="form-control" required>
             </div>
+
             <div class="form-groups">
-                <label for="valor2">Valor 2:</label>
-                <input type="number" step="1" name="valor2" id="valor2" class="form-control">
+                <label for="valor-2">valor 2</label>
+                <input type="number" name="valor-2" id="valor-2" class="form-control" required>
             </div>
-            </div>
+
             <div class="form-groups">
-                <button type="button" class="btn btn-danger" onclick="controllerCalculoGol()">Adiçao</button>
+                <label for="operacao">Operações: (1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação)</label>
+                <!-- <input type="number" name="operacao" id="operacao" min="1" max="4" step="1" class="form-control"> -->
 
-                <button type="button" class="btn btn-danger" onclick="controllerCalculoGol()">Subtração</button>
-
-                <button type="button" class="btn btn-danger" onclick="controllerCalculoGol()">Divisão</button>
-
-                <button type="button" class="btn btn-danger" onclick="controllerCalculoGol()">Multiplicação</button>
+                <select name="operacao" id="operacao" onchange="controllerCalculo()">
+                    <option value="1">Adição</option>
+                    <option value="2">Subtração</option>
+                    <option value="3">Divisão</option>
+                    <option value="4">Multiplicação</option>
+                </select>
             </div>
+
+            <div class="form-groups">
+                <button type="button" class="btn btn-primary" onclick="adicao()">+</button>
+                <button type="button" class="btn btn-primary" onclick="subtracao()">-</button>
+                <button type="button" class="btn btn-primary" onclick="divisao()">/</button>
+                <button type="button" class="btn btn-primary" onclick="multiplicacao()">*</button>
+            </div>
+
+            <!-- <div class="form-groups">
+                <button type="button" class="btn btn-secondary" onclick="controllerCalculo()">Calcular</button>
+            </div> -->
         </form>
 
         <span id="saidaTexto"></span>
+
+        <div id="dados_banco"></div>
     </section>
 </body>
 
-<script src="/selecao/js/selecao_17.js"></script>
+<script src="js/selecao_17.js"></script>
 
 </html>
